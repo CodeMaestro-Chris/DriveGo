@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+.env
+package-lock.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Optional backup/IDE files
+*.bak
+*.swp
+*.tmp
+
+# GitHub Copilot / OpenAI cache (optional)
+.copilot/
+
+
+# Coverage & testing
+coverage/
+.nyc_output/

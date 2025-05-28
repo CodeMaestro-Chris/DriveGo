@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Payment - DriveGo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- <div class="text-center mx-auto py-5 d-flex justify-content-center align-items-center">
+        <div class="check-email my-5 py-5">
+            <div class="payment-container"> -->
+                <div class="container my-5 py-5">
+                    <div class="row g-1 align-items-center justify-content-between">
+                        <div class="shadow p-4 col-lg-6 mx-auto">
+                            <h2 class="text-center mb-4 form-title">Car Payment</h2>
+                            <form id="payment-form" class="contact-form" action="/payment" method="post">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label mt-2">Full Name</label>
+                                        <input name="fullName" type="text" id="fullName" class="form-control">
+                                        <small class="text-danger" id="name-error"></small>
+                                    </div>
+                    
+                                    <div class="col-md-6">
+                                        <label class="form-label mt-2">Phone Number</label>
+                                        <input name="fullName" type="text" id="phoneNo" class="form-control">
+                                        <small class="text-danger" id="phone-error"></small>
+                                    </div>
+                    
+                                    <div class="col-md-6 mt-2">
+                                        <label class="form-label">Email</label>
+                                        <input name="email" type="email" id="email" class="form-control">
+                                        <small class="text-danger" id="email-error"></small>
+                                    </div>
+                    
+                                    <div class="col-md-6 mt-2">
+                                        <label class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" name="cardNumber" id="cardNumber" maxlength="16" />
+                                        <small class="text-danger" id="card-error"></small>
+                                      </div>
+                                
+                                      <div class="col-md-6 mt-2">
+                                        <label>Bank</label>
+                                        <select name="bank" class="form-control" id="bank" >
+                                          <option value="">Select Your Bank</option>
+                                          <option>Access Bank</option>
+                                          <option>Citibank Nigeria</option>
+                                          <option>Ecobank Nigeria</option>
+                                          <option>FairMoney MFB</option>
+                                          <option>FCMB (First City Monument Bank)</option>
+                                          <option>Fidelity Bank</option>
+                                          <option>First Bank of Nigeria</option>
+                                          <option>GTBank (Guaranty Trust Bank)</option>
+                                          <option>UBA (United Bank for Africa)</option>
+                                          <option>Zenith Bank</option>
+                                        </select>
+                                        <small class="text-danger" id="bank-error"></small>
+                                      </div>
+                                
+                                      <div class="col-md-3 mt-2">
+                                        <label>CVV</label>
+                                        <input type="text" name="cvv" class="form-control" id="cvv" maxlength="3" />
+                                        <small class="text-danger" id="cvv-error"></small>
+                                      </div>
+                                
+                                      <div class="col-md-3 mt-2">
+                                        <label>PIN</label>
+                                        <input type="password" name="pin" class="form-control" id="pin" maxlength="4" />
+                                        <small class="text-danger" id="pin-error"></small>
+                                      </div>
+
+                                    <div class="mt-4 ml-3">
+                                        <button type="submit" class="primary-btn px-5">Pay Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+       <!--  </div>
+    </div> -->
+   
+
+    <script>
+
+const form = document.getElementById("payment-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Clear previous error messages
+  document.querySelectorAll(".error").forEach((el) => (el.innerText = ""));
+
+  // Get form values
+  const fullName = document.getElementById("fullName").value.trim();
+  const phoneNo = document.getElementById("phoneNo").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const cardNumber = document.getElementById("cardNumber").value.trim();
+  const bank = document.getElementById("bank").value;
+  const cvv = document.getElementById("cvv").value.trim();
+  const pin = document.getElementById("pin").value.trim();
+
+  // Validation Flags
+  let isValid = true;
+
+  // Full Name Validation
+  if (fullName.length < 3) {
+    document.getElementById("name-error").innerText = "Name must be at least 3 characters.";
+    isValid = false;
+  }
+
+  // Phone Number Validation (10-15 digits)
+  if (!/^\d{10,15}$/.test(phoneNo)) {
+    document.getElementById("phone-error").innerText = "Phone number must be between 10 and 15 digits.";
+    isValid = false;
+  }
+
+  // Email Validation
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    document.getElementById("email-error").innerText = "Invalid email address.";
+    isValid = false;
+  }
+
+  // Card Number Validation (16 digits)
+  if (!/^\d{16}$/.test(cardNumber)) {
+    document.getElementById("card-error").innerText = "Card number must be exactly 16 digits.";
+    isValid = false;
+  }
+
+  // Bank Validation
+  if (!bank) {
+    document.getElementById("bank-error").innerText = "Please select your bank.";
+    isValid = false;
+  }
+
+  // CVV Validation (3 digits)
+  if (!/^\d{3}$/.test(cvv)) {
+    document.getElementById("cvv-error").innerText = "CVV must be exactly 3 digits.";
+    isValid = false;
+  }
+
+  // PIN Validation (4 digits)
+  if (!/^\d{4}$/.test(pin)) {
+    document.getElementById("pin-error").innerText = "PIN must be exactly 4 digits.";
+    isValid = false;
+  }
+
+  // If all validations pass, submit form
+  if (isValid) {
+    form.submit();
+  }
+});    
+
+        // // Get parameters from the URL
+        // const params = new URLSearchParams(window.location.search);
+
+        // // Display car details
+        // document.getElementById("car-name").innerText = params.get("carName");
+        // document.getElementById("car-description").innerText = params.get("carDescription");
+
+        // // Display user details
+        // document.getElementById("user-name").innerText = params.get("name");
+        // document.getElementById("user-phone").innerText = params.get("phone");
+        // document.getElementById("date-needed").innerText = params.get("dateNeeded");
+        // document.getElementById("date-return").innerText = params.get("dateReturn");
+        // document.getElementById("rental-period").innerText = params.get("rentalPeriod");
+
+        // // Confirm payment button
+        // document.getElementById("confirm-payment").addEventListener("click", () => {
+        //     alert("Payment Confirmed! Thank you for choosing DriveGo.");
+        //     // Here you can add redirection to a confirmation page if needed
+        // });
+
+    </script>
+</body>
+</html>

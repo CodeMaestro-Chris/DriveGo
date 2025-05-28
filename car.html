@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars | DriveGo</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+     <!-- Header Section Begin -->
+     <header class="header cars-header">
+        <!-- Offcanvas Menu Begin -->
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="offcanvas__logo">
+                <a href="./index.html"><img src="img/logo-black.png" alt="" width="150px"></a>
+            </div>
+            <nav class="offcanvas__menu mobile-menu">
+                <ul>
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./car.html">Cars</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    
+                </ul>
+                
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+            <ul class="offcanvas__widget__add">
+                <li class="mb-2"><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+                <li><i class="fa fa-envelope-o"></i> kellyobinna360@gmail.com</li>
+            </ul>
+            <div class="offcanvas__phone__num">
+                <i class="fa fa-phone"></i>
+                <span>+234 704 418 9132</span>
+            </div>
+            <div class="offcanvas__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="./login.html" class="primary-btn mt-3">Rent A Car</a>
+            </div>
+        </div>
+        <!-- Offcanvas Menu End -->
+    
+            <div class="nav-bar py-2">
+                <div class="row align-items-center container mx-auto nav">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.html" class="d-flex align-items-center"><span>DRIVEG</span><img src="img/wheel.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header__nav">
+                            <nav class="header__menu">
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li class="active"><a href="./car.html">Cars</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header__nav__widget">
+                                <a href="#" class="primary-btn">Rent A Car</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open col-lg-2">
+                    <span class="fa fa-bars text-white"></span>
+                </div>
+            </div>
+    
+        <!-- Breadcrumb End -->
+            <div class="breadcrumb-option py-5">
+                <div class="container pb-5">
+                    <div class="row py-5">
+                        <div class="col-lg-12 text-center py-4">
+                            <div class="breadcrumb__text"  data-aos="fade-in">
+                                <h2>Car Listing</h2>
+                                <div class="breadcrumb__links">
+                                    <a href="./index.html">Home</a>
+                                    <span>Car Listing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Breadcrumb Begin -->
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Car Section Begin -->
+    <section class="car spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="car__sidebar">
+                        <div class="car__search">
+                            <h5>Car Search</h5>
+                            <form id="carSearchForm" class="search-form">
+                                <input type="text" id="carSearchInput" placeholder="Search for car..." />
+                                <button type="submit" class="site-btn search-btn fa fa-search"></button>
+                            </form>
+                        </div>
+                        <div class="car__filter">
+                            <h5>Car Filter</h5>
+                            <!-- Filter Form -->
+                            <form id="carFilterForm" class="row filter-form" action="javascript:void(0);">  
+                                <!-- Engine Filter -->
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <select name="engine" id="engine">
+                                        <option value="">Engine</option>
+                                        <option value="V4">V4</option>
+                                        <option value="V6">V6</option>
+                                        <option value="V8">V8</option>
+                                        <option value="Electric">Electric</option>
+                                    </select>
+                                </div>
+  
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <select name="fuel" id="fuel">
+                                        <option value="">Fuel</option>
+                                        <option value="Petrol">Petrol</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="Electric">Electric</option>
+                                    </select>
+                                </div>
+                                <!-- Year Filter -->
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <select name="year" id="year">
+                                        <option value="">Year</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                    </select>
+                                </div>
+                                <!-- Mileage Filter -->
+                                <div class="col-lg-12 col-md-6 col-sm-6 mt-2">
+                                  <select id="mileage">
+                                    <option value="">Mileage (km)</option>
+                                    <option value="0-10000">0 - 10,000 km</option>
+                                    <option value="10000-50000">10,000 - 50,000 km</option>
+                                    <option value="50000-100000">50,000 - 100,000 km</option>
+                                    <option value="100000-150000">100,000 - 150,000 km</option>
+                                    <option value="150000-200000">150,000 - 200,000 km</option>
+                                    <option value="200000+">200,000+ km</option>
+                                  </select>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <select name="minPrice" id="minPrice">
+                                        <option value="">Min Price</option>
+                                        <option value="20000">20,000</option>
+                                        <option value="30000">30,000</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12 col-md-6 col-sm-6">
+                                    <select name="maxPrice" id="maxPrice">
+                                        <option value="">Max Price</option>
+                                        <option value="40000">40,000</option>
+                                        <option value="50000">50,000</option>
+                                    </select>
+                                </div>
+
+                                    <div class="col-lg-6 car__item col-md-6 col-sm-6">
+                                        <button type="submit" class="site-btn filter-btn">Filter</button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <button type="button" id="resetFilters" class="proceed-btn">Reset</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car List -->
+                <div id="carList" class="row col-lg-9">
+                    <!-- 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Acura" data-model="MDX" data-engine="V6" data-fuel="Petrol" data-price="30000" data-year="2021" data-mileage="15000">
+                        <div>
+                            <img src="img/cars/car-17.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Acura MDX</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Acura</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=001"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Audi" data-model="Q7" data-engine="V8" data-fuel="Diesel" data-price="45000" data-year="2021" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-16.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Audi Q7</a></h5>
+                                <ul>
+                                    <li>V8</li>
+                                    <li>Audi</li>
+                                    <li>Diesel</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=002"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="BMW" data-model="X5" data-engine="V6" data-fuel="Petrol" data-price="50000" data-year="2020" data-mileage="15000">
+                        <div class="car__item__text"><div class="car__item__text">
+                            <img src="img/cars/car-18.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">BMW X5</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Toyota</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=003"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Toyota" data-model="Camry" data-engine="V4" data-fuel="Petrol" data-price="25000" data-year="2021" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-14.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Toyota Camry</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Toyota</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=004"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Ford" data-model="Escape" data-engine="V4" data-fuel="Petrol" data-price="22000" data-year="2023" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-19.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Ford Escape</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Ford</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=005"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Mercedes" data-model="GLE" data-engine="V6" data-fuel="Diesel" data-price="52000" data-year="2021" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-15.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Mercedes GLE</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Mercedes</li>
+                                    <li>Diesel</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=006"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Honda" data-model="Accord" data-engine="V4" data-fuel="Petrol" data-price="24000" data-year="2021" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-20.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Honda Accord</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Honda</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=007"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Hyundai" data-model="2017" data-engine="V4" data-fuel="Diesel" data-price="26000" data-year="2021" data-mileage="200000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-21.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Hyundai Tucson 2017</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Hyundai</li>
+                                    <li>Diesel</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=008"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Mitsubishi" data-model="Outlander" data-engine="V6" data-fuel="Petrol" data-price="47000" data-year="2017" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/2021-lexus-lx-570-redesign.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Lexus LX 570</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Lexus</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=009"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Nissan" data-model="Altima" data-engine="V4" data-fuel="Petrol" data-price="23000" data-year="2021" data-mileage="55000">
+                        
+                        <div class="car__item__text">
+                            <img src="img/cars/car-24.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Nissan Altima</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Nissan</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=010"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car 11 -->
+                     
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Mitsubishi" data-model="Outlander" data-engine="V6" data-fuel="Petrol" data-price="47000" data-year="2017" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/2017_Mitsubishi_Outlander.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Mitsubishi Outlander</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Mitsubishi</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=011"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Tesla" data-model="Tesla" data-engine="Electric" data-fuel="Electric" data-price="55000" data-year="2021" data-mileage="15000">
+                        
+                        <div class="car__item__text">
+                            <img src="img/cars/car-29.jpeg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Tesla Model 3</a></h5>
+                                <ul>
+                                    <li>Electric</li>
+                                    <li>Tesla</li>
+                                    <li>Electric</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=012"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 13 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Subaru" data-model="Outback" data-engine="V4" data-fuel="Petrol" data-price="26000" data-year="2021" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-27.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Subaru Outback</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Nissan</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=013"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 14 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Hyundai" data-model="Tucson" data-engine="V4" data-fuel="Petrol" data-price="25000" data-year="2025" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/Hyundai-Tucson.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Hyundai Tucson 2021</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Hyundai</li>
+                                    <li>Diesel</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=014"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 15 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Peugeot" data-model="Peugeot" data-engine="V4" data-fuel="Petrol" data-price="28000" data-year="2024" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/peugeot_3008.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Peugeot 3008</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Peugeot</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=015"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 16 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Lexus" data-model="Rx 350" data-engine="V6" data-fuel="Petrol" data-price="48000" data-year="2022" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-31.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Lexus RX 350</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Lexus</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=016"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 17 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Chevrolet" data-model="Malibu" data-engine="V6" data-fuel="Petrol" data-price="28000" data-year="2021" data-mileage="25000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-25.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Chevy Malibu</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Nissan</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=017"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 18 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Infiniti" data-model="QX60" data-engine="V6" data-fuel="Petrol" data-price="43000" data-year="2022" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/2017_infiniti_qx60.jpeg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Infiniti QX60</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Inifiniti</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=018"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 19 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Tesla" data-model="Model Y" data-engine="Electric" data-fuel="Electric" data-price="47000" data-year="2024" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/2024-Tesla-Model-Y.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Tesla Model Y</a></h5>
+                                <ul>
+                                    <li>Electric</li>
+                                    <li>Telsa</li>
+                                    <li>Electric</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=019"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 20 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Porsche" data-model="cayenne" data-engine="V6" data-fuel="Petrol" data-price="28000" data-year="2023" data-mileage="25000">
+                        <div class="car__item__text">
+                            <img src="img/cars/porsche-cayenne.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Porsche Cayenne</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Porsche</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=020"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>              
+                    
+                    <!-- car 21 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item"
+                        data-brand="Kia" data-model="Sportage" data-engine="V4" data-fuel="Petrol" data-price="27000" data-year="2021" data-mileage="75000">
+                        <div class="car__item__text">
+                            <img src="img/cars/car-23.jpeg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Kia Sportage</a></h5>
+                                <ul>
+                                    <li>V4</li>
+                                    <li>Kia</li>
+                                    <li>Petrol</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=021"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- car 22 -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 car__item" 
+                        data-brand="Land Rover" data-model="Discovery" data-engine="V6" data-fuel="Diesel" data-price="60000" data-year="2022" data-mileage="15000">
+                        <div class="car__item__text">
+                            <img src="img/cars/land-rover-discovery-sport-2023-07272022-1024x683.jpg" alt="">
+                        </div>
+                        <div class="car__item__text">
+                            <div class="car__item__text__inner">
+                                <h5><a href="#">Land Rover Discovery</a></h5>
+                                <ul>
+                                    <li>V6</li>
+                                    <li>Land Rover</li>
+                                    <li>Diesel</li>
+                                </ul>
+                            </div>
+                            <div class="car__item__price">
+                                <a href="./car-details.html?id=022"><span class="car-option">For Rent</span></a>
+                                <h6>₦30,000<span>/Month</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Car Section End -->
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="footer__contact">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__title">
+                            <h2>Contact Us Now!</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__contact__option">
+                            <div class="option__item"><a href="+2347031035269" class="nav-link text-white"><i class="fa fa-phone"></i> (+234) 703 103 5269</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer__about">
+                        <div class="header__logo">
+                            <a href="./index.html" class="d-flex align-items-center"><span>DRIVEG</span><img src="img/wheel.png" alt=""></a>
+                        </div>
+                        <p>Any questions? Let us know in store at 153/155 Aba-Owerri road, Aba or call us
+                            on (+234) 703 103 5269</p>
+                        <div class="footer__social">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="google"><i class="fa fa-google"></i></a>
+                            <a href="#" class="skype"><i class="fa fa-skype"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3">
+                    <div class="footer__widget">
+                        <h5>Get to know</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Payment</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <div class="footer__widget">
+                        <h5>Infomation</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer__brand">
+                        <h5>Top Brand</h5>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright__text">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | By CodeMaestro Chris</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Footer Section End -->
+
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/script.js"></script>
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+
+$(document).ready(function () {
+    $('#carFilterForm').on('submit', function (e) {
+        e.preventDefault();
+
+        // Get the filter values
+        const engine = $('#engine').val();
+        const fuel = $('#fuel').val();
+        const year = $('#year').val();
+        const minPrice = parseInt($('#minPrice').val()) || 0;
+        const maxPrice = parseInt($('#maxPrice').val()) || Infinity;
+
+        console.log({ engine, fuel, year, minPrice, maxPrice });
+
+        // Loop through each car item
+        $('#carList .car__item').each(function () {
+            const carEngine = $(this).data('engine');
+            const carFuel = $(this).data('fuel');
+            const carYear = String($(this).data('year'));
+            const carPrice = parseInt($(this).data('price'));
+
+            // Filtering logic
+            const matchesEngine = engine ? carEngine === engine : true;
+            const matchesFuel = fuel ? carFuel === fuel : true;
+            const matchesYear = year ? carYear === year : true;
+            const matchesPrice = (carPrice >= minPrice && carPrice <= maxPrice);
+
+            // Show or hide based on conditions
+            if (matchesEngine && matchesFuel && matchesYear && matchesPrice) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+    // Search form submission
+    $('#carSearchForm').on('submit', function (e) {
+        e.preventDefault();
+        const query = $('#carSearchInput').val().toLowerCase();
+
+        $('.car__item').each(function () {
+            const carName = $(this).find('h5 a').text().toLowerCase();
+            $(this).toggle(carName.includes(query));
+        });
+    });
+
+    // Reset filters
+    $('#resetFilters').on('click', function () {
+        $('#carFilterForm')[0].reset();
+        $('#carSearchForm')[0].reset();
+        $('.car__item').show();
+    });
+});
+
+
+
+        
+    </script>
+
+
+</body>
+
+</html>
