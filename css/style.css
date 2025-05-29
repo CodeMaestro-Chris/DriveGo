@@ -610,12 +610,13 @@ body.dark-theme div {
 .header{
 	position: relative;
 	z-index: 4;
+	/* background-size: 100% !important; */
 }
 .home-header{
 	background-image: linear-gradient(to right, #111111, #111111c4, #11111181), url(../img/heroBG.jpg) !important;
-	background-size: 100%;
+	background-size: cover !important;
 	background-repeat: no-repeat !important;
-	background-position: top left;
+	background-position: top center;
 }
 
 /* Sticky Navbar */
@@ -812,6 +813,9 @@ body.dark-theme div {
 }
 .offcanvas-menu-wrapper {
 	display: none;
+}
+.offcanvas-menu-wrapper li a{
+	color: #0e0e0e;
 }
 
 .canvas__open {
@@ -1764,6 +1768,9 @@ footer {
 
 .footer__brand ul li i {
 	margin-right: 2px;
+}
+.footer .col-1{
+	margin-left: -12px !important;
 }
 
 /*---------------------
@@ -3529,6 +3536,7 @@ img.about-img{
 		-o-transition: all, 0.5s;
 		transition: all, 0.5s;
 		opacity: 0;
+		color: #000000;
 	}
 	.offcanvas-menu-wrapper.active {
 		opacity: 1;
@@ -3786,6 +3794,7 @@ img.about-img{
 		-o-transition: all, 0.5s;
 		transition: all, 0.5s;
 		opacity: 0;
+		color: #0e0e0e;
 	}
 	.offcanvas-menu-wrapper.active {
 		opacity: 1;
