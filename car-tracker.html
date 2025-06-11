@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveGo Live Tracking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <style>
+    
+  </style>
+
+
+</head>
+
+<body>
+
+    <!-- Header Section Begin -->
+    <header class="header contact-header">
+        <!-- Offcanvas Menu Begin -->
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="offcanvas__logo">
+                <a href="./index.html"><img src="img/logo-black.png" alt="" width="150px"></a>
+            </div>
+            <nav class="offcanvas__menu mobile-menu">
+                <ul>
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./car.html">Cars</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    
+                </ul>
+                
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+            <ul class="offcanvas__widget__add">
+                <li class="mb-2"><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+                <li><i class="fa fa-envelope-o"></i> kellyobinna360@gmail.com</li>
+            </ul>
+            <div class="offcanvas__phone__num">
+                <i class="fa fa-phone"></i>
+                <span>+234 704 418 9132</span>
+            </div>
+            <div class="offcanvas__social">
+                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.google.com"><i class="fa fa-google"></i></a>
+                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div>
+                <a href="./login.html" class="primary-btn mt-3">Rent A Car</a>
+            </div>
+        </div>
+        <!-- Offcanvas Menu End -->
+    
+            <div class="nav-bar py-2">
+                <div class="row align-items-center container mx-auto nav">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.html" class="d-flex align-items-center"><span>DRIVEG</span><img src="img/wheel.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header__nav">
+                            <nav class="header__menu">
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./car.html">Cars</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header__nav__widget">
+                                <a href="./car.html" class="primary-btn">Rent A Car</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open col-lg-2">
+                    <span class="fa fa-bars text-white"></span>
+                </div>
+            </div>
+    
+        <!-- Breadcrumb End -->
+            <div class="breadcrumb-option py-5">
+                <div class="container pb-5">
+                    <div class="row py-5">
+                        <div class="col-lg-12 text-center py-4">
+                            <div class="breadcrumb__text"  data-aos="fade-in">
+                                <h2>Car Payment</h2>
+                                <div class="breadcrumb__links">
+                                    <a href="./index.html">Home</a>
+                                    <a href="./car.html">Cars</a>
+                                    <span>Payment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Breadcrumb Begin -->
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Dark Mode Switch  -->
+    <label class="switch">
+      <input id="darkToggle" type="checkbox" checked="true"/>
+      <div class="slider round">
+      <div class="sun-moon">
+          <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+  
+          <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+          <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="50"></circle>
+          </svg>
+      </div>
+      <div class="stars">
+          <svg id="star-1" class="star" viewBox="0 0 20 20">
+          <path
+              d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+          ></path>
+          </svg>
+          <svg id="star-2" class="star" viewBox="0 0 20 20">
+          <path
+              d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+          ></path>
+          </svg>
+          <svg id="star-3" class="star" viewBox="0 0 20 20">
+          <path
+              d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+          ></path>
+          </svg>
+          <svg id="star-4" class="star" viewBox="0 0 20 20">
+          <path
+              d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+          ></path>
+          </svg>
+      </div>
+      </div>
+  </label>
+
+  <div class="container car-tracking">
+    <h2>DriveGo Car Tracking System</h2>
+    <div id="map" class="rounded shadow-sm border"></div>
+
+    <p id="coords" class="text-center">Current Coordinates: —</p>
+
+    <div class="controls">
+      <a onclick="startTracking()"><i class="fa fa-play"></i></a>
+      <a onclick="stopTracking()"><i class="fa fa-stop"></i></a>
+    </div>
+  </div>
+
+  <!-- Footer Section Begin -->
+  <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <div class="container">
+        <div class="footer__contact">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__contact__title">
+                        <h2>Contact Us Now!</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__contact__option">
+                        <div class="option__item"><a href="+2347031035269" class="nav-link text-white"><i class="fa fa-phone"></i> (+234) 703 103 5269</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="footer__about">
+                    <div class="header__logo">
+                        <a href="./index.html" class="d-flex align-items-center"><span>DRIVEGO</span></a>
+                    </div>
+                    <p>Any questions? Let us know in store at 153/155 Aba-Owerri road, Aba or call us
+                        on (+234) 703 103 5269</p>
+                    <div class="footer__social">
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google"></i></a>
+                        <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-3">
+                <div class="footer__widget">
+                    <h5>Get to know</h5>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Payment</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3">
+                <div class="footer__widget">
+                    <h5>Infomation</h5>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer__brand">
+                    <h5>Top Brand</h5>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright__text">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | By CodeMaestro Chris</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer Section End -->
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    let map = L.map('map').setView([5.1162, 7.3665], 14); // Centered at Aba
+    let watchId = null;
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const carIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/128/11433/11433678.png',
+      iconSize: [40, 40],
+      iconAnchor: [20, 20]
+    });
+
+    let marker = null;
+
+    function startTracking() {
+      if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+      }
+
+      watchId = navigator.geolocation.watchPosition((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        const coords = [lat, lng];
+
+        document.getElementById("coords").innerText = `Current Coordinates: Lat ${lat.toFixed(5)}, Lng ${lng.toFixed(5)}`;
+        localStorage.setItem("drivego-live-coords", JSON.stringify(coords));
+
+        if (!marker) {
+          marker = L.marker(coords, { icon: carIcon }).addTo(map);
+        } else {
+          marker.setLatLng(coords);
+        }
+
+        map.setView(coords);
+      }, (error) => {
+        alert("Error getting location: " + error.message);
+      }, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      });
+    }
+
+    function stopTracking() {
+      if (watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+        alert("Tracking stopped.");
+      }
+    }
+
+    // Restore last known location
+    const saved = localStorage.getItem("drivego-live-coords");
+    if (saved) {
+      const [lat, lng] = JSON.parse(saved);
+      marker = L.marker([lat, lng], { icon: carIcon }).addTo(map);
+      map.setView([lat, lng], 14);
+      document.getElementById("coords").innerText = `Restored Coordinates: Lat ${lat.toFixed(5)}, Lng ${lng.toFixed(5)}`;
+    }
+
+  
+
+  const toggle = document.getElementById("darkToggle");
+  const body = document.body;
+
+  toggle.addEventListener("change", () => {
+    body.classList.toggle("dark-theme");
+  });
+  </script>
+</body>
+</html>
