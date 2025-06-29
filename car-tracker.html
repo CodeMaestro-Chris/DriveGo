@@ -26,10 +26,10 @@
 
 </head>
 
-<body>
+<body class="dark-theme">
 
     <!-- Header Section Begin -->
-    <header class="header contact-header">
+    <header class="header tracker-header">
         <!-- Offcanvas Menu Begin -->
         <div class="offcanvas-menu-overlay"></div>
         <div class="offcanvas-menu-wrapper">
@@ -101,11 +101,11 @@
                     <div class="row py-5">
                         <div class="col-lg-12 text-center py-4">
                             <div class="breadcrumb__text"  data-aos="fade-in">
-                                <h2>Car Payment</h2>
+                                <h2>Car Tracking</h2>
                                 <div class="breadcrumb__links">
                                     <a href="./index.html">Home</a>
                                     <a href="./car.html">Cars</a>
-                                    <span>Payment</span>
+                                    <span>Tracker</span>
                                 </div>
                             </div>
                         </div>
@@ -183,21 +183,60 @@
       </div>
       </div>
   </label>
+  
+  <div class="container">
+    <div class="car-tracking">
+      <h2>DriveGo Car Tracking System</h2>
+      <div id="map" class="rounded shadow-sm border"></div>
 
-  <div class="container car-tracking">
-    <h2>DriveGo Car Tracking System</h2>
-    <div id="map" class="rounded shadow-sm border"></div>
+      <p id="coords" class="text-center">Current Coordinates: —</p>
 
-    <p id="coords" class="text-center">Current Coordinates: —</p>
-
-    <div class="controls">
-      <a onclick="startTracking()"><i class="fa fa-play"></i></a>
-      <a onclick="stopTracking()"><i class="fa fa-stop"></i></a>
+      <div class="controls">
+        <a onclick="startTracking()"><i class="fa fa-play"></i></a>
+        <a onclick="stopTracking()"><i class="fa fa-stop"></i></a>
+      </div>
     </div>
-  </div>
+    
+    <div class="row align-items-center justify-content-between">
+      <div id="confirmation" class="col-lg-5 col-md-12">
+        <h3>Confirm Car Return</h3>
+        <p class="mt-2 mb-4">Kindly fill in the required details if you want to return a car</p>
+        <label for="">Name</label>
+        <input type="text" id="customerName" placeholder="Enter your name" />
+        <label for="">Transaction ID</label>
+        <input type="text" id="carId" placeholder="Enter transaction ID or Plate Number" /><br>
+        <a onclick="confirmReturn()"  class="primary-btn text-white">Confirm Return</a>
+        <p id="returnStatus"></p>
+      </div>
+      <div class="confirm-img col-lg-6 col-md-12">
+        <img src="./img/undraw_navigator_2ntl.png" alt="" class="w-100">
+      </div>
+    </div>
+  </div><br>  
 
-  <!-- Footer Section Begin -->
-  <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+  <!-- Cta Begin -->
+  <div class="cta mt-5 pt-5">
+    <div class="container">
+        <div class="row">
+              <a href="./car.html" class="col-lg-6 col-md-6">
+                <div class="cta__item set-bg" data-setbg="img/cta/cta-1.jpg" data-aos="fade-right">
+                    <h4>Do You Want To Buy A Car?</h4>
+                    <p>Explore a wide selection of quality vehicles at competitive prices. Your dream car is just a click away.</p>
+                </div>
+              </a>
+              <a href="./car.html" class="col-lg-6 col-md-6">
+                <div class="cta__item set-bg" data-setbg="img/cta/cta-2.jpg" data-aos="fade-left">
+                    <h4>Do You Want To Rent A Car?</h4>
+                    <p>Choose from a variety of rental options for daily, weekly, or monthly use—all with flexible terms and great rates.</p>
+                </div>
+              </a>        
+        </div>
+    </div>
+</div>
+<!-- Cta End -->
+
+ <!-- Footer Section Begin -->
+ <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
     <div class="container">
         <div class="footer__contact">
             <div class="row">
@@ -208,7 +247,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="footer__contact__option">
-                        <div class="option__item"><a href="+2347031035269" class="nav-link text-white"><i class="fa fa-phone"></i> (+234) 703 103 5269</a></div>
+                        <div class="option__item"><a href="+2347044189132" class="nav-link text-white"><i class="fa fa-phone"></i> (+234) 704 418 9132</a></div>
                     </div>
                 </div>
             </div>
@@ -220,12 +259,12 @@
                         <a href="./index.html" class="d-flex align-items-center"><span>DRIVEGO</span></a>
                     </div>
                     <p>Any questions? Let us know in store at 153/155 Aba-Owerri road, Aba or call us
-                        on (+234) 703 103 5269</p>
+                        on (+234) 704 418 9132</p>
                     <div class="footer__social">
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="google"><i class="fa fa-google"></i></a>
-                        <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.x.com" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://google.com" class="google"><i class="fa fa-google"></i></a>
+                        <a href="https://www.pinterest.com" class="pinterest"><i class="fa fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
@@ -233,10 +272,10 @@
                 <div class="footer__widget">
                     <h5>Get to know</h5>
                     <ul>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Payment</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
+                        <li><a href="./car.html"><i class="fa fa-angle-right"></i> Rent A Car</a></li>
+                        <li><a href="./car-payment.html"><i class="fa fa-angle-right"></i> Payment</a></li>
+                        <li><a href="./car-tracker.html"><i class="fa fa-angle-right"></i> Car Tracking</a></li>
+                        <li><a href="./car-tracker.html"><i class="fa fa-angle-right"></i> Return</a></li>
                     </ul>
                 </div>
             </div>
@@ -244,10 +283,9 @@
                 <div class="footer__widget">
                     <h5>Infomation</h5>
                     <ul>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Hatchback</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Sedan</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> SUV</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Crossover</a></li>
+                        <li><a href="./about.html"><i class="fa fa-angle-right"></i> About DriveGo</a></li>
+                        <li><a href="./contact.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="./registration.html"><i class="fa fa-angle-right"></i> Create an Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -255,28 +293,41 @@
                 <div class="footer__brand">
                     <h5>Top Brand</h5>
                     <ul>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Abarth</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Acura</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Audi</a></li>
+                        <li><a href="https://www.abarth.com" target="_blank"><i class="fa fa-angle-right"></i> Abarth</a></li>
+                        <li><a href="https://www.acura.com" target="_blank"><i class="fa fa-angle-right"></i> Acura</a></li>
+                        <li><a href="https://www.alfaromeo.com" target="_blank"><i class="fa fa-angle-right"></i> Alfa Romeo</a></li>
+                        <li><a href="https://www.audi.com" target="_blank"><i class="fa fa-angle-right"></i> Audi</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> BMW</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Ferrari</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Honda</a></li>
+                        <li><a href="https://www.bmw.com" target="_blank"><i class="fa fa-angle-right"></i> BMW</a></li>
+                        <li><a href="https://www.chevrolet.com" target="_blank"><i class="fa fa-angle-right"></i> Chevrolet</a></li>
+                        <li><a href="https://www.ferrari.com" target="_blank"><i class="fa fa-angle-right"></i> Ferrari</a></li>
+                        <li><a href="https://www.honda.com" target="_blank"><i class="fa fa-angle-right"></i> Honda</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer__copyright__text">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | By CodeMaestro Chris</p>
-        </div>
+            </div>
+            <div class="footer__copyright__text">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | By Obinna Kelly</p>
+            </div>           
     </div>
 </footer>
 
 <!-- Footer Section End -->
 
+
+  <!-- Js Plugins -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+  <script src="./js/aos.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
     let map = L.map('map').setView([5.1162, 7.3665], 14); // Centered at Aba
@@ -341,6 +392,22 @@
       document.getElementById("coords").innerText = `Restored Coordinates: Lat ${lat.toFixed(5)}, Lng ${lng.toFixed(5)}`;
     }
 
+
+    function confirmReturn() {
+      const name = document.getElementById("customerName").value.trim();
+      const carId = document.getElementById("carId").value.trim();
+      const status = document.getElementById("returnStatus");
+
+      if (!name || !carId) {
+        status.innerText = "Please fill in both fields.";
+        status.style.color = "red";
+        return;
+      }
+
+      localStorage.setItem("car-return-confirmation", JSON.stringify({ name, carId, time: new Date().toISOString() }));
+      status.innerText = `Thank you ${name}, return for Car [${carId}] has been confirmed.`;
+      status.style.color = "green";
+    }
   
 
   const toggle = document.getElementById("darkToggle");
@@ -349,6 +416,7 @@
   toggle.addEventListener("change", () => {
     body.classList.toggle("dark-theme");
   });
+  
   </script>
 </body>
 </html>

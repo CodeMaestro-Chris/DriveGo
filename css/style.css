@@ -624,7 +624,7 @@ body.dark-theme div {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 999 !important;
     background-color: #141414; /* or any color you want */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
@@ -4396,6 +4396,12 @@ svg {
 }
 
 /* Car Tracking Page */
+.tracker-header{
+	background-image: linear-gradient(to right, #111111e1, #111111d7), url(../img/tracking-bg.jpg) !important;
+	background-size: cover;
+	background-repeat: no-repeat !important;
+	background-position: center;
+}
 .car-tracking{
 	margin-top: 5rem;
 	margin-bottom: 5rem;
@@ -4409,6 +4415,7 @@ svg {
 	height: 500px;
 	width: 100%;
 	margin-bottom: 1rem;
+	z-index: 1;
 }
 .controls {
 	display: flex;
@@ -4426,6 +4433,10 @@ svg {
 	padding: 15px 16px !important;
 	border-radius: 100%;
 	border: 1px solid transparent;
+	transition: 0.2s;
+}
+.controls a .fa-stop:hover{
+	background-color: #ff1c1c;
 }
 .controls a .fa-play{
 	font-size: 16px;
@@ -4435,7 +4446,37 @@ svg {
 	border-radius: 100%;
 	border: 1px solid white;
 }
+.controls a .fa-play:hover{
+	background-color: #222;
+	transition: 0.2s;
+}
 #coords {
 	font-family: monospace;
 	color: #353535;
+}
+#confirmation {
+	margin-top: 2rem;
+	padding: 1rem;
+	/* width: 100%; */
+}
+#confirmation input {
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: 100%;
+	background-color: rgb(230, 229, 229);
+	border: none;
+	border-radius: 5px;
+}
+#confirmation button {
+	padding: 0.5rem 1rem;
+}
+.car-track{
+	background-color: rgb(241, 241, 241);
+}
+.car-track h3{
+	font-weight: 600;
+}
+.car-track p{
+	font-weight: 510;
+	font-size: 17px;
 }
